@@ -152,7 +152,65 @@
         }
         .about-grid {
             display: grid;
-            gap: 30px;
+            gap: 40px;
+        }
+        .about-text p {
+            margin-bottom: 1.2rem;
+            color: var(--text-light);
+        }
+        .about-list {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+        .about-list li {
+            position: relative;
+            padding-left: 1.5rem;
+            margin-bottom: 0.8rem;
+        }
+        .about-list li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--primary-color);
+            font-weight: bold;
+        }
+        .about-actions {
+            display: flex;
+            gap: 15px;
+            margin-top: 2rem;
+            flex-wrap: wrap;
+        }
+        .btn {
+            display: inline-block;
+            padding: 10px 24px;
+            border-radius: 4px;
+            font-weight: bold;
+            text-align: center;
+            transition: var(--transition);
+            cursor: pointer;
+        }
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            border: 2px solid var(--primary-color);
+        }
+        .btn-primary:hover {
+            background-color: var(--primary-hover);
+            border-color: var(--primary-hover);
+        }
+        .btn-outline {
+            background-color: transparent;
+            color: var(--primary-color);
+            border: 2px solid var(--primary-color);
+        }
+        .btn-outline:hover {
+            background-color: var(--primary-color);
+            color: white;
+        }
+        .about-image img {
+            width: 100%;
+            border-radius: 8px;
+            box-shadow: 15px 15px 0px rgba(0, 173, 181, 0.1);
         }
         /* CSS:ABOUT-END */
 
@@ -208,6 +266,9 @@
             .nav-list {
                 display: none; /* 骨架階段暫時隱藏手機版複雜選單，或可改為簡約排列 */
             }
+            .about-image {
+                margin-top: 1rem;
+            }
         }
         /* CSS:RWD-END */
     </style>
@@ -246,12 +307,23 @@
                 <div class="container">
                     <div class="about-grid">
                         <div class="about-text">
-                            <h2 id="about-heading" class="section-title">關於我（佔位內容）</h2>
-                            <p>這裡目前是 About 區的占位內容。之後會用另一個 Prompt 產生正式內容，包含個人背景描述與專業心路歷程。</p>
-                            <p>開發者要把新的 section 程式碼「整段」貼回來，覆蓋 <code>SECTION:ABOUT-START</code> 註解之間的內容。</p>
+                            <h2 id="about-heading" class="section-title">關於我</h2>
+                            <p>目前我主要專注於前端工程開發、技術教學與接案服務。我擅長運用現代化的網頁技術，打造流暢且高互動性的使用者體驗，並且隨時保持對新技術的學習熱忱。</p>
+                            <p>在開發與團隊合作的過程中，我極度重視溝通品質。我喜歡把複雜的技術邏輯用「白話文」講清楚，也熱愛教學與分享，深信建立團隊共識與清晰的溝通是專案成功的核心基石。</p>
+                            
+                            <ul class="about-list">
+                                <li><strong>清晰溝通：</strong> 能夠精準理解需求，並將抽象概念轉化為具體開發規格。</li>
+                                <li><strong>熱愛教學：</strong> 樂於分享技術知識，帶領新手或團隊一起成長。</li>
+                                <li><strong>品質堅持：</strong> 追求簡潔、高效且具備高可維護性的程式碼架構。</li>
+                            </ul>
+
+                            <div class="about-actions">
+                                <a href="#projects" class="btn btn-primary">查看作品集</a>
+                                <a href="#contact" class="btn btn-outline">聯絡我</a>
+                            </div>
                         </div>
                         <div class="about-image">
-                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-1.2.1&auto=format&fit=crop&w=800&q=80" alt="在筆電前撰寫程式碼的前端開發者" loading="lazy">
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="專注於寫程式的前端工程師" loading="lazy">
                         </div>
                     </div>
                 </div>
